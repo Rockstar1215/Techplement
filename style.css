@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #c4c9c7, #fff,#c4c9c7 );
+}
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+.nav{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to right, #b4ead6, #69a1e1);
+}
+.title{
+    font-size: 25px;
+    padding-left: 20px;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.title:hover{
+    transform: scaleY(0.9);
+}
+.title img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.search-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.search-container input[type=text] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    box-shadow: 1px 0px 6px rgba(118, 116, 116, 0.9); /* Adding 3D border effect */
+
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 1px 0px 6px rgba(118, 116, 116, 0.9);; /* Adding 3D border effect */
+}
+
+.quote-box{
+    background-image: linear-gradient(to right,#69a1e1, #b4ead6, #69a1e1);
+    width: 700px;
+    position: absolute;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
+    font-family: "Playfair Display", serif;
+}
+.quote-box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.quote-box blockquote{
+    font-size: 26px;
+    min-width: 110px;
+}
+.quote-box blockquote::before,.quote-box blockquote::after{
+    content: '"';
+}
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background:black;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button{
+    background: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quote {
+    background-image: linear-gradient(to right,#69a1e1, #b4ead6, #69a1e1);
+    width: 700px;
+    max-height: calc(100vh - 150px); /* Adjust as needed */
+    overflow-y: auto; /* Add vertical scrollbar */
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
+    font-family: "Playfair Display", serif;
+}
+.quote::-webkit-scrollbar{
+    display: none;
+}
+
+.quote h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background:rgb(138, 166, 226) ;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+.quote div{
+    
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#search-results-list {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.search-result {
+
+    width: 48%;
+    margin-bottom: 20px;
+}
+.quote-card {
+    background-color: #d8e5f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.quote-card blockquote {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quote-card .author {
+    font-style: italic;
+    color: #666666;
+}
+/media queries/
+@media only screen and (max-width: 600px){
+    .title{
+        font-size: 18px;
+    }
+
+    .title img{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    
+    .search-container {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .quote-box{
+        width: 300px;
+        margin-top: 80px;
+        padding: 20px;
+    }
+    .quote-box h2{
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .quote-box blockquote{
+        font-size: 20px;
+    }
+    .quote-box span{
+        margin-top: 5px;
+    }
+    .quote-box button{
+        width: 120px;
+        height: 40px;
+    }
+    
+    .quote {
+        width: 300px;
+        padding: 10px;
+        top: 1200px;
+    }
+
+    .quote h2{
+        font-size: 28px;
+        margin-bottom: 30px;
+    }  
+    
+    .quote div{ 
+        margin-top: 5px;        
+    }
+    
+    #search-results-list {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    .search-result {
+    
+        width: 48%;
+        margin-bottom: 5px;
+    }
+    .quote-card {
+        padding: 10px;
+    }
+    
+    .quote-card blockquote {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px){   
+    .search-container input[type=text] {
+        width: 400px;
+    }
+    
+    .quote-box{
+        width: 550px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    .quote-box h2{
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .quote-box blockquote{
+        font-size: 22px;
+        min-width: 110px;
+    }
+
+    .quote-box div{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .quote-box button{
+        height: 40px;
+    }
+    
+    .quote {
+        width: 550px;
+        top: 1200px;
+    }
+    
+    .quote h2{
+        font-size: 28px;
+    }
+    
+    .quote-card blockquote {
+        font-size: 16px;
+    }
+
+}
